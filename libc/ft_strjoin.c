@@ -6,16 +6,16 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:15:03 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/10 11:38:48 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:57:52 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i;
-	int j;
-	int len;
-	char *p;
+	int		i;
+	int		j;
+	int		len;
+	char	*p;
 
 	i = 0;
 	j = 0;

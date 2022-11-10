@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:55:11 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/08 17:30:41 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:58:20 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
-	size_t dstlen;
-	size_t srclen;
+	size_t	i;
+	size_t	j;
+	size_t	dstlen;
+	size_t	srclen;
 
 	j = 0;
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 18:42:04 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/08 18:47:50 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:55:46 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_tolower(int c)
 {
-    if (c >= 65 && c <= 90)
+	if (c >= 65 && c <= 90)
 		return (c + 32);
-    else
-        return (c);
+	else
+		return (c);
 }

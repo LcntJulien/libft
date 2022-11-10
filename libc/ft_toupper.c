@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 17:31:28 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/08 18:47:52 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:55:54 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,6 @@ int	ft_toupper(int c)
 {
 	if (c >= 97 && c <= 122)
 		return (c - 32);
-    else
-        return (c);
+	else
+		return (c);
 }

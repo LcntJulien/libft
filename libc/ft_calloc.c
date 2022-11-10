@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:32:35 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/09 19:27:28 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:52:57 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	size_t i;
-	void *p;
+	size_t	i;
+	void	*p;
 
 	i = size * count;
 	p = (void *)malloc(i);

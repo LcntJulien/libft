@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 18:02:37 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/10 09:44:05 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 11:55:16 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!dst || !src)
