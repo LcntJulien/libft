@@ -6,9 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:38:45 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/10 16:07:25 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 16:41:38 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	counter(const char *s, char c)
 {
@@ -28,9 +30,9 @@ int	counter(const char *s, char c)
 	return (r);
 }
 
-char	*bring(char	*s, char c)
+char	*bring(char *s, char c)
 {
-	int	i;
+	int		i;
 	char	*p;
 
 	i = 0;
@@ -38,7 +40,7 @@ char	*bring(char	*s, char c)
 		i++;
 	p = malloc(sizeof(char *) * (i + 1));
 	if (!p)
-		return (0);
+		return (NULL);
 	i = 0;
 	while (s[i] && s[i] != c)
 	{
@@ -49,12 +51,26 @@ char	*bring(char	*s, char c)
 	return (p);
 }
 
+char	**squarrefree(char **p)
+{
+	int	i;
+
+	i = 0;
+	while (p[i])
+	{
+		free(p[i]);
+		i++;
+	}
+	squarrefree(p);
+	return (NULL);
+}
+
 char	**ft_split(const char *s, char c)
 {
-	int i;
-	int j;
-	int cnt;
-	char **r;
+	int		i;
+	int		j;
+	int		cnt;
+	char	**r;
 
 	i = 0;
 	j = 0;
@@ -66,7 +82,9 @@ char	**ft_split(const char *s, char c)
 			i++;
 		if (s[i] != '\0')
 		{
-            r[j] = bring((s + i), c);
+			r[j] = bring((s + i), c);
+			if (!(r[j]))
+				return (squarrefree(r));
 			j++;
 		}
 		while (s[i] && s[i] == c)
