@@ -6,10 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 14:02:48 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/09 15:31:06 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:44:29 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 int	strncmp(const char *s1, const char *s2, size_t n)

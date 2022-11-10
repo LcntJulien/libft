@@ -6,10 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 16:03:00 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/09 19:37:48 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:44:22 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 #include <string.h>
 
 size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)

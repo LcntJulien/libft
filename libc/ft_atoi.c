@@ -6,9 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:16:35 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/09 18:30:46 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 09:43:12 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *str)
 {
