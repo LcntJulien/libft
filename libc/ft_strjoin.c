@@ -6,9 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:15:03 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/10 11:57:52 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/10 17:53:44 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
