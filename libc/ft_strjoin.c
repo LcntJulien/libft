@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/10 09:47:21 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/10 10:08:57 by jlecorne         ###   ########.fr       */
+/*   Created: 2022/11/10 09:58:45 by jlecorne          #+#    #+#             */
+/*   Updated: 2022/11/10 10:11:51 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <string.h>
-
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t i;
-	char *p;
+    int i;
+    int j;
+    int len;
+    char    *p;
 
-	i = 0;
-	p = malloc(sizeof(char) * len + 1);
+    i = 0;
+    j = 0;
+    len = (ft_strlen(s1) + ft_strlen(s2) + 1);
+    p = malloc(sizeof(char) * len);
     if (!p)
-        return (NULL);    
-	while (s && i < len)
-	{
-		*(char *)(p + i) = *(char *)(s + start);
-        start++;
-		i++;
-	}
-    return (p);
+        return (0);
+    
 }
