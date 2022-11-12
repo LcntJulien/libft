@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:38:45 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/10 16:41:38 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/12 12:55:38 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ char	**squarrefree(char **p)
 		free(p[i]);
 		i++;
 	}
-	squarrefree(p);
+	free(p);
 	return (NULL);
 }
 
@@ -82,7 +82,7 @@ char	**ft_split(const char *s, char c)
 			i++;
 		if (s[i] != '\0')
 		{
-			r[j] = bring((s + i), c);
+			r[j] = bring((char *)(s + i), c);
 			if (!(r[j]))
 				return (squarrefree(r));
 			j++;
@@ -90,6 +90,5 @@ char	**ft_split(const char *s, char c)
 		while (s[i] && s[i] == c)
 			i++;
 	}
-	r[j] = '\0';
 	return (r);
 }
