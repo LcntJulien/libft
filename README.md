@@ -1,4 +1,4 @@
-git du projet libft :
+<!-- git du projet libft :
 
 left todo ;
             - correct strtrim
@@ -13,4 +13,4 @@ left todo ;
 
 planning :
 
-fin d'ici Mardi, sur place lundi et Mardi
+fin d'ici Mardi, sur place lundi et Mardi -->
