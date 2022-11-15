@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split.c                                         :+:      :+:    :+:   */
+/*   ft_split1.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:38:45 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/14 16:56:55 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/15 02:12:05 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,11 +96,11 @@ char	**whileloop(const char *s, char c, int cnt)
 	return (r);
 }
 
-char	**ft_split(const char *s, char c)
+char	**ft_split1(const char *s, char c)
 {
-	int		i;
-	int		j;
-	int		cnt;
+	int	i;
+	int	j;
+	int	cnt;
 
 	i = 0;
 	j = 0;
@@ -110,12 +110,14 @@ char	**ft_split(const char *s, char c)
 
 int	main(void)
 {
-	char str[] = " ol ol";
-	char **tab;
-	int i;
-	char c = ' ';
+	char	str[];
+	char	**tab;
+	int		i;
+	char	c;
 
-	tab = ft_split(str, c);
+	str[] = " ol ol";
+	c = ' ';
+	tab = ft_split1(str, c);
 	i = 0;
 	while (tab[i])
 	{
