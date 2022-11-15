@@ -3,14 +3,8 @@
 left todo ;
             - correct strtrim
             - correct split
-            - itoa
-            - mappi
-            - iteri
-            - putchar
-            - putstr
-            - putendl
-            - putnbr
+            - correct iteri
 
 planning :
 
-fin d'ici Mardi, sur place lundi et Mardi -->
+fin d'ici Mardi, sur place Mardi -->
