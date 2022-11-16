@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 17:57:19 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/16 12:38:47 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:21:12 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+# include <stdio.h>
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_isalpha(int c);

@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:24:32 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/15 18:17:26 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/16 16:41:20 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,11 @@ int	sizenbr(long nbr)
 
 char	*convertnbr(long nbr, int len, int sign, char *s)
 {
+	if (nbr == 0)
+		return (s = ft_strdup("0"));
 	s = malloc(sizeof(char) * (len + 1));
 	if (!s)
 		return (NULL);
-	if (nbr == 0)
-		return (s = "0");
 	if (nbr < 0)
 	{
 		nbr *= -1;

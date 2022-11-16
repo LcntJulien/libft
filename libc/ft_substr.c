@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 09:47:21 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/12 16:24:40 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/16 17:41:41 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	if (start >= ft_strlen(s))
-		return (ft_calloc(1, sizeof(char)));
+		return (ft_strdup(""));
 	if (len < ft_strlen(s + start))
 		size = len;
 	else
