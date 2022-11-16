@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_split2.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 17:05:58 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/15 16:26:22 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/16 15:47:44 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ int	tabcounter(const char *s, char c)
 
 	i = 0;
 	r = 0;
+	if (s[0] != '\0' && s)
+		r++;
 	while (s[i++])
 	{
-		if ((s[i + 1] == '\0' && s[i] != c) || (s[i] == c && s[i - 1] != c))
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			r++;
 	}
 	return (r);
@@ -33,8 +35,12 @@ char	**freetab(char **p)
 	int	i;
 
 	i = 0;
-	while (p[i++])
+	while (p[i])
+	{
 		free(p[i]);
+		i++;
+	}
+	free(p[i]);
 	free(p);
 	return (NULL);
 }
@@ -49,10 +55,7 @@ char	*filltab(const char *s, char c)
 		i++;
 	ptr = malloc(sizeof(char) * (i + 1));
 	if (!ptr)
-	{
-		free(ptr);
 		return (NULL);
-	}
 	i = 0;
 	while (s[i] && s[i] != c)
 	{
@@ -73,34 +76,19 @@ char	**ft_split(const char *s, char c)
 	j = 0;
 	tab = malloc(sizeof(char *) * (tabcounter(s, c) + 1));
 	if (!tab)
-		freetab(tab);
-	while (s[i])
+		return (NULL);
+	while (*s)
 	{
-		if ((s[i] != c && s[i - 1] == c) || (s[i] != c && i == 0))
+		if ((i == 0 && s[i] != c) || (*s != c && *(s - 1) == c))
 		{
-			tab[j] = filltab(s, c);
+			tab[j] = filltab((char *)s, c);
+			if (!tab[j])
+				return (freetab(tab));
 			j++;
+			i++;
 		}
 		s++;
 	}
 	tab[j] = 0;
 	return (tab);
-}
-
-int	main(void)
-{
-	int		i;
-	char	*str;
-	char	c;
-	char	**tab;
-
-	i = 0;
-	str = " split    this for me,       please !  ";
-	c = ' ';
-	tab = ft_split(str, c);
-	while (tab[i])
-	{
-		printf("%s\n", tab[i]);
-		i++;
-	}
 }

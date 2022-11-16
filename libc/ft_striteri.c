@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:25:37 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/15 18:34:27 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/16 15:48:06 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		s[i] = (*f)(i, s[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
 }
