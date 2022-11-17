@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:24:32 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/16 16:41:20 by jlecorne         ###   ########.fr       */
+/*   Updated: 2022/11/16 18:40:29 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,12 @@
 
 int	sizenbr(long nbr)
 {
-	int		i;
 	size_t	r;
 
-	i = 0;
 	r = 0;
 	if (nbr < 0)
 	{
 		nbr *= -1;
-		i = 1;
 		r++;
 	}
 	while (nbr >= 1)
