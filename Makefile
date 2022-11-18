@@ -6,7 +6,7 @@
 #    By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 17:57:39 by jlecorne          #+#    #+#              #
-#    Updated: 2022/11/16 23:12:17 by jlecorne         ###   ########.fr        #
+#    Updated: 2022/11/18 14:30:57 by jlecorne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,10 +49,12 @@ NAME	= libft.a
 
 OBJS	=  ${SRCS:.c=.o}
 
-HEADERS	= includes/
+HEAD	= includes/
+
+FLAGS	= -Wall -Wextra -Werror
 
 .c.o	:
-		gcc -Wall -Wextra -Werror -I ${HEADERS} -c $< -o ${<:.c=.o}
+		gcc ${FLAGS} -I ${HEAD} -c $< -o ${<:.c=.o}
 
 ${NAME} : ${OBJS}
 		ar rc ${NAME} ${OBJS}
