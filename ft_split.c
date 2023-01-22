@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 17:05:58 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/18 15:20:46 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/01/22 22:24:59 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,6 @@ char	**ft_split(const char *s, char c)
 		}
 		s++;
 	}
-	tab[j] = 0;
+	tab[j] = NULL;
 	return (tab);
 }
