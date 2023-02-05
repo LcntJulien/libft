@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 17:05:58 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/01/22 22:24:59 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/02/05 16:56:56 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,18 +80,18 @@ char	**ft_split(const char *s, char c)
 	tab = malloc(sizeof(char *) * (tabcounter(s, c) + 1));
 	if (!tab)
 		return (NULL);
-	while (*s)
+	while (s[i])
 	{
-		if ((i == 0 && s[i] != c) || (*s != c && *(s - 1) == c))
+		if ((i == 0 && s[i] != c) || (s[i] != c && s[i - 1] == c))
 		{
-			tab[j] = filltab((char *)s, c);
+			tab[j] = filltab((s + i), c);
 			if (!tab[j])
 				return (freetab(tab));
 			j++;
 			i++;
 		}
-		s++;
+		i++;
 	}
-	tab[j] = NULL;
+	tab[j] = 0;
 	return (tab);
 }
