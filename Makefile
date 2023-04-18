@@ -6,7 +6,7 @@
 #    By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 17:57:39 by jlecorne          #+#    #+#              #
-#    Updated: 2023/04/17 17:58:10 by jlecorne         ###   ########.fr        #
+#    Updated: 2023/04/18 14:27:50 by jlecorne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,26 +66,28 @@ HEAD	= includes/
 
 FLAGS	= -Wall -Wextra -Werror
 
-#.c.o	:
-#		gcc ${FLAGS} -I ${HEAD} -c $< -o ${<:.c=.o}
+.c.o	:
+		@gcc ${FLAGS} -I ${HEAD} -c $< -o ${<:.c=.o}
 
 ${NAME} : ${OBJS}
 		@ar rc ${NAME} ${OBJS}
 		@echo "libft created"
 
-bonus : ${BOBJS}
-		@ar rc {NAME} ${BOBJS}
+bonus 	: ${BOBJS}
+		@ar rc ${NAME} ${BOBJS}
 		@echo "libft created (bonus)"
 
-all : ${NAME}
+all 	: ${NAME}
 
-clean :
-		rm -f ${OBJS}
-		rm -f ${BOBJS}
+clean 	:
+		@rm -f ${OBJS}
+		@rm -f ${BOBJS}
+		@echo "objects deleted"
 
-fclean : clean
-		rm -f ${NAME}
+fclean 	: clean
+		@rm -f ${NAME}
+		@echo "libft.a deleted"
 
-re : fclean all
+re 		: fclean all
 
 .PHONY	: all, clean, fclean, re, bonus,

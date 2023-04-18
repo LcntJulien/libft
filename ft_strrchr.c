@@ -6,12 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 21:02:48 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/12 15:11:35 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:12:17 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 char	*ft_strrchr(const char *s, int c)
 {

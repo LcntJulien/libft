@@ -6,16 +6,16 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:17:27 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/04/17 17:18:20 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:10:47 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *t;
-	t_list *tmp;
+	t_list	*t;
+	t_list	*tmp;
 
 	t = *lst;
 	while (t)

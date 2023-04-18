@@ -6,12 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/04 18:55:11 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/12 12:56:10 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:11:52 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {

@@ -6,15 +6,15 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:03:12 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/04/17 17:16:43 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/18 14:11:10 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (lst)

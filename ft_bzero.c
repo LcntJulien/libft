@@ -6,12 +6,11 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 15:09:37 by jlecorne          #+#    #+#             */
-/*   Updated: 2022/11/12 14:57:33 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/18 13:10:42 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {

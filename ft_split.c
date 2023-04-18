@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 17:05:58 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/03/29 13:48:47 by jlecorne         ###   ########.fr       */
+/*   Created: 2023/04/18 14:43:56 by jlecorne          #+#    #+#             */
+/*   Updated: 2023/04/18 14:58:41 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,11 @@ int	tabcounter(const char *s, char c)
 	r = 0;
 	if (c == 0)
 		return (1);
-	if (s[0] != '\0' && s)
-		r++;
-	while (s[i++])
+	while (s[i])
 	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
+		if (s[i] != 0 && s[i] != c && (i == 0 || s[i - 1] == c))
 			r++;
+		i++;
 	}
 	return (r);
 }
