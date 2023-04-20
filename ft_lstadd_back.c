@@ -6,21 +6,21 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 16:11:46 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/04/18 14:10:39 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/18 17:06:18 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list **lstfirst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*t;
 
-	if (*lstfirst)
+	if (*lst)
 	{
-		t = ft_lstlast(*lstfirst);
+		t = ft_lstlast(*lst);
 		t->next = &*new;
 	}
 	else
-		*lstfirst = new;
+		*lst = new;
 }

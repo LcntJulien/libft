@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:18:46 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/04/18 15:29:50 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/20 11:11:30 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*save;
+	t_list *new_lst;
+	t_list *elem;
 
-	if (!lst || !f || !del)
+	if (!lst)
 		return (0);
-	new_list = ft_lstnew(f(lst->content));
-	if (!new_list)
-		return (0);
-	save = new_list;
-	lst = lst->next;
+	new_lst = 0;
 	while (lst)
 	{
-		new_list->next = ft_lstnew(f(lst->content));
-		if (!new_list->next)
+		if (!(elem = ft_lstnew(f(lst->content))))
 		{
-			ft_lstclear(&save, del);
+			ft_lstclear(&new_lst, del);
 			return (0);
 		}
-		new_list = new_list->next;
+		ft_lstadd_back(&new_lst, elem);
 		lst = lst->next;
 	}
-	new_list->next = NULL;
-	return (save);
+	return (new_lst);
 }
