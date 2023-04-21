@@ -6,7 +6,7 @@
 /*   By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 14:43:56 by jlecorne          #+#    #+#             */
-/*   Updated: 2023/04/18 14:58:41 by jlecorne         ###   ########.fr       */
+/*   Updated: 2023/04/20 16:59:37 by jlecorne         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ char	*filltab(const char *s, char c)
 		ptr[i] = s[i];
 		i++;
 	}
-	ptr[i] = '\0';
+	ptr[i] = 0;
 	return (ptr);
 }
 
