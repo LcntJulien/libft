@@ -6,11 +6,9 @@
 #    By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 17:57:39 by jlecorne          #+#    #+#              #
-#    Updated: 2023/05/04 20:30:10 by jlecorne         ###   ########.fr        #
+#    Updated: 2023/05/04 20:45:14 by jlecorne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-
 
 SRCS =	srcs/ft_atoi.c			\
 		srcs/ft_bzero.c			\
@@ -68,28 +66,28 @@ HEAD	= includes/
 
 FLAGS	= -Wall -Wextra -Werror
 
-.c.o	:
-		@gcc ${FLAGS} -I ${HEAD} -c $< -o ${<:.c=.o}
-
-${NAME} : ${OBJS}
-		@ar rc ${NAME} ${OBJS}
-		@echo "libft created"
-
-bonus 	: ${BOBJS}
-		@ar rc ${NAME} ${BOBJS}
-		@echo "libft created (bonus)"
-
 all 	: ${NAME}
 
+${NAME} : ${OBJS}
+	@ar rc ${NAME} ${OBJS}
+	@echo "libft created"
+
+.c.o	:
+	@gcc ${FLAGS} -I ${HEAD} -c $< -o ${<:.c=.o}
+
+bonus 	: ${BOBJS}
+	@ar rc ${NAME} ${BOBJS}
+	@echo "libft created (bonus)"
+
 clean 	:
-		@rm -f ${OBJS}
-		@rm -f ${BOBJS}
-		@echo "objects deleted"
+	@rm -f ${OBJS}
+	@rm -f ${BOBJS}
+	@echo "objects deleted"
 
 fclean 	: clean
-		@rm -f ${NAME}
-		@echo "libft.a deleted"
+	@rm -f ${NAME}
+	@echo "libft.a deleted"
 
 re 		: fclean all
 
-.PHONY	: all, clean, fclean, re, bonus,
+.PHONY	: all, bonus, clean, fclean, re
