@@ -6,7 +6,7 @@
 #    By: jlecorne <jlecorne@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/10 17:57:39 by jlecorne          #+#    #+#              #
-#    Updated: 2023/04/18 14:27:50 by jlecorne         ###   ########.fr        #
+#    Updated: 2023/05/04 19:29:24 by jlecorne         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ BSRCS =	ft_lstnew.c			\
 
 NAME	= libft.a
 
-OBJS	=  ${SRCS:.c=.o}
+OBJS	= ${SRCS:.c=.o}
 
 BOBJS 	= ${BSRCS:.c=.o}
 
